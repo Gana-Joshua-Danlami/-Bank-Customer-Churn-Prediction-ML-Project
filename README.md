@@ -65,3 +65,30 @@ Our trained XGBoost model identified the top predictors of customer churn, helpi
 
 ---
 
+### **Business Recommendations & Churn Prevention Strategy**
+---
+
+## High-Risk Customer Personas & Churn Strategy
+
+### 🎯 Top At-Risk Personas:
+
+| Persona                    | % of Churn Risk Customers | Suggested Action                                                                                      |
+| -------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------- |
+| `Other, Active`          | 14%                       | Conduct satisfaction survey, these customers are engaged but may lack reward or progression          |
+| `, Other, Not Active`      | 12%                       | Low activity customers test automated check-ins or loyalty perks                                    |
+| `, Germany, Other, Active` | 11%                       | Germany-based active users segment-specific campaigns in local language, offer region-based rewards |
+| `Mid, Other, Not Active`   | 8%                        | Customers with some tenure but dropping activity build   re-engagement flows                          |
+| `, Spain, Not Active`      | 6%                        | Spain-based low-activity users explore language support or cultural barriers                        |
+| `Mid, Spain, Active`       | 5%                        | Actively engaged in Spain, nurture and upsell with premium product lines                             |
+
+### General Recommendations:
+
+* Launch **churn-triggered campaigns** using model scores (threshold ≥ 0.70)
+* Develop **rewards tiers** based on tenure and product usage
+* Offer **live support or onboarding refreshers** to older users not using all products
+* **Personalize messages** for Germany and Spain — top churn geographies
+* Run **retention A/B tests** with incentives for `not active + credit card` groups
+
+---
+
+
