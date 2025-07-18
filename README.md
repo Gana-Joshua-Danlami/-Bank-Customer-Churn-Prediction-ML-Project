@@ -20,6 +20,54 @@ This project uses machine learning to predict whether a customer will leave a ba
 
 ## 📁 Project Structure
 
+ ### data/
+
+│   ├── raw_data.csv
+
+│   └── processed_data.csv
+
+### notebooks/
+
+│   └── churn_prediction_modeling.ipynb
+
+### scripts/
+
+│   └── churn_model_pipeline.py
+
+### outputs/
+
+│   ├── churn_strategy.md
+
+│   ├── feature_importance_ranking.txt
+
+│   ├── threshold_evaluation.txt
+
+│   ├── top_10_percent_churn_risk.csv
+
+│   ├── churn_feature_importance.png
+
+│   ├── churn_confusion_matrix.png
+
+│   └── churn_precision_recall_curve.png
+
+### models/
+
+│   └── xgb_churn_model.pkl
+
+├── README.md
+
+├── requirements.txt
+
+└── .gitignore
+---
+### 📤 Output Files Explained
+
+- `feature_importance_ranking.txt`: Ranked list of top predictors of churn.
+- `threshold_evaluation.txt`: Summary of how model performance varies at different probability thresholds.
+- `top_10_percent_churn_risk.csv`: Contains the top 10% highest-risk customers and their associated persona labels.
+- `churn_feature_importance.png`: Visual plot of feature importance scores.
+- `churn_confusion_matrix.png`: Confusion matrix showing final prediction performance.
+
 ---
 ## 💡 Business Insight Summary: Key Drivers of Customer Churn
 
