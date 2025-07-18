@@ -48,6 +48,10 @@ This project uses machine learning to predict whether a customer will leave a ba
 
 │   ├── churn_confusion_matrix.png
 
+│   ├── churn_persona_breakdown.md
+
+│   ├── churn_strategy_recommendations.md
+
 │   └── churn_precision_recall_curve.png
 
 ### models/
@@ -67,7 +71,8 @@ This project uses machine learning to predict whether a customer will leave a ba
 - `top_10_percent_churn_risk.csv`: Contains the top 10% highest-risk customers and their associated persona labels.
 - `churn_feature_importance.png`: Visual plot of feature importance scores.
 - `churn_confusion_matrix.png`: Confusion matrix showing final prediction performance.
-
+- `churn_persona_breakdown.md`: Summarizes top churn-risk customer personas
+- `churn_strategy_recommendations.md`: Actionable business strategies to reduce churn
 ---
 ## 💡 Business Insight Summary: Key Drivers of Customer Churn
 
