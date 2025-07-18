@@ -139,7 +139,7 @@ Our trained XGBoost model identified the top predictors of customer churn, helpi
 * Launch **churn-triggered campaigns** using model scores (threshold ≥ 0.70)
 * Develop **rewards tiers** based on tenure and product usage
 * Offer **live support or onboarding refreshers** to older users not using all products
-* **Personalize messages** for Germany and Spain — top churn geographies
+* **Personalize messages** for Germany and Spain top churn geographies
 * Run **retention A/B tests** with incentives for `not active + credit card` groups
 
 ---
