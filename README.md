@@ -30,8 +30,6 @@ This project uses machine learning to predict whether a customer will leave a ba
 
 │   ├── raw_data.csv
 
-│   └── processed_data.csv
-
 ### notebooks/
 
 │   └── churn_prediction_modeling.ipynb
