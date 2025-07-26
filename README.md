@@ -7,14 +7,20 @@ This project uses machine learning to predict whether a customer will leave a ba
 - Source: Kaggle  
 - File: `Churn_Modelling.csv`  
 - Location: `data/raw/`
+  
+---
 
 ## Project Goals
 - Understand key drivers of customer churn
-- Build a predictive model using ML
-- Provide insights to reduce churn risk
+- Build a predictive machine learning model
+- Visualize churn trends using Tableau
+- Recommend retention strategies based on insights
+
+---
 
 ## 🛠️ Tools & Tech
 - Python (Pandas, Scikit-learn, XGBoost)
+- Tableau (for dashboard storytelling)
 - Google Colab
 - Git & GitHub
 
@@ -64,84 +70,60 @@ This project uses machine learning to predict whether a customer will leave a ba
 
 └── .gitignore
 ---
-### 📤 Output Files Explained
 
-- `feature_importance_ranking.txt`: Ranked list of top predictors of churn.
-- `threshold_evaluation.txt`: Summary of how model performance varies at different probability thresholds.
-- `top_10_percent_churn_risk.csv`: Contains the top 10% highest-risk customers and their associated persona labels.
-- `churn_feature_importance.png`: Visual plot of feature importance scores.
-- `churn_confusion_matrix.png`: Confusion matrix showing final prediction performance.
-- `churn_persona_breakdown.md`: Summarizes top churn-risk customer personas
-- `churn_strategy_recommendations.md`: Actionable business strategies to reduce churn
----
-## 💡 Business Insight Summary: Key Drivers of Customer Churn
+## 📊 Tableau Dashboard: Visual Insight Layer
 
-Our trained XGBoost model identified the top predictors of customer churn, helping us uncover which behaviors and traits most strongly influence a customer’s decision to leave.
+Explore churn behavior across customer groups with this clean, client-facing dashboard:
 
-### 🔑 Top Churn Drivers:
+**🔗 [View Tableau Dashboard](https://public.tableau.com/views/BankCustomerChurnAnalysis_17535099327740/BankCustomerChurnAnalysis)**
 
-1. **Active Membership Status**
+**Key Views Include:**
+- KPI Overview: Churn %, Retention %, Total Customers
+- Churn by Geography, Tenure Bands, Gender & Age Groups
+- Dynamic filters for deeper exploration across customer segments
 
-   * The most influential feature. Customers who are **not active members** are significantly more likely to churn.
-
-2. **Number of Products Owned**
-
-   * Fewer products → higher churn risk. Cross-sell opportunities (getting customers to use more services) may improve retention.
-
-3. **Gender**
-
-   * Gender showed influence, suggesting possible behavioral or engagement differences worth exploring further.
-
-4. **Country (especially Germany & Spain)**
-
-   * Customers in **Germany** showed higher churn risk. Spain also featured prominently, highlighting the need for region-specific strategies.
-
-5. **Age & Tenure Group**
-
-   * **Older customers** and those in certain tenure bands (e.g. "New" or "Mid") had higher risk. Lifecycle-based retention strategies could help.
-
-6. **Behavioral Combos**
-
-   * Features like `has_credit_and_active` indicate **combinations of engagement** (e.g. having credit + being active) are valuable for retention.
-
-7. **Credit Score & Salary Had Low Impact**
-
-   * Surprisingly, financial metrics like `estimated_salary`, `balance_salary_ratio`, and `credit_score` were **less predictive** of churn in this dataset, suggesting that **behavioral and demographic factors** are more critical.
+The dashboard was designed to mirror real business use cases and is fully interactive for exploration and insight storytelling.
 
 ---
 
-### What This Means for the Business:
+## 📤 Output Files Explained
 
-* **Retention focus should prioritize engagement behaviors** (activity, number of products) over purely financial metrics.
-* **Targeted campaigns** in countries like Germany and among new customers can deliver quick wins.
-* **Personalized outreach** for low-engagement segments (inactive, single-product customers) may reduce churn significantly.
+- `feature_importance_ranking.txt`: Top features influencing churn
+- `threshold_evaluation.txt`: Model behavior across decision thresholds
+- `top_10_percent_churn_risk.csv`: Highest-risk customers with persona labels
+- `churn_persona_breakdown.md`: Persona clusters based on churn behavior
+- `churn_strategy_recommendations.md`: Strategy memo for retention
+- Visuals: Feature importance, PR curve, confusion matrix
+
+---
+
+## 🔍 Key Churn Insights
+
+**Top Predictors:**
+- Lack of Active Membership
+- Fewer Products Owned
+- Geography (especially Germany and Spain)
+- Age & Tenure bands
+
+**Surprising Insight:**
+Financial metrics like salary and credit score were **less predictive** engagement and behavior mattered more.
 
 ---
 
-### **Business Recommendations & Churn Prevention Strategy**
----
+## Recommendations
 
-## High-Risk Customer Personas & Churn Strategy
-
-### 🎯 Top At-Risk Personas:
-
-| Persona                    | % of Churn Risk Customers | Suggested Action                                                                                      |
-| -------------------------- | ------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `Other, Active`          | 14%                       | Conduct satisfaction survey, these customers are engaged but may lack reward or progression          |
-| `, Other, Not Active`      | 12%                       | Low activity customers test automated check-ins or loyalty perks                                    |
-| `, Germany, Other, Active` | 11%                       | Germany-based active users segment-specific campaigns in local language, offer region-based rewards |
-| `Mid, Other, Not Active`   | 8%                        | Customers with some tenure but dropping activity build   re-engagement flows                          |
-| `, Spain, Not Active`      | 6%                        | Spain-based low-activity users explore language support or cultural barriers                        |
-| `Mid, Spain, Active`       | 5%                        | Actively engaged in Spain, nurture and upsell with premium product lines                             |
-
-### General Recommendations:
-
-* Launch **churn-triggered campaigns** using model scores (threshold ≥ 0.70)
-* Develop **rewards tiers** based on tenure and product usage
-* Offer **live support or onboarding refreshers** to older users not using all products
-* **Personalize messages** for Germany and Spain top churn geographies
-* Run **retention A/B tests** with incentives for `not active + credit card` groups
+- Run churn-triggered interventions for users with low engagement
+- Tailor campaigns for Germany & Spain segments
+- Build re-engagement flows for "mid-tenure, inactive" personas
+- Personalize upsell campaigns for active single-product users
+- Launch A/B retention tests with loyalty incentives
 
 ---
+
+## Summary
+
+This project simulates a real business use case using data and machine learning to drive **customer retention** strategy. It bridges both technical implementation and stakeholder-ready insights through the final Tableau dashboard.
+
+
 
 
